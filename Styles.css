@@ -1,0 +1,78 @@
+/* Common small layout */
+* { box-sizing: border-box; }
+
+/* header */
+.page-header { background:#f0f0f0; padding:10px 0; margin-bottom:12px; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+.header-inner { max-width:950px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 16px; font-family:Arial; }
+
+/* Auth form card */
+.auth-card, .box { max-width:420px; margin:40px auto; padding:20px; background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); font-family: Arial; }
+.auth-card input { width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc; }
+.auth-card button { width:100%; padding:10px; margin-top:6px; border-radius:8px; background:#3c2f2f; color:#fff; border:none; cursor:pointer; }
+
+.error { color:#c00; }
+
+/* Invitation page styles (your CSS) */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5ede7, #2e2b2b);
+  font-family: Poppins, Arial, sans-serif;
+  color: #3c2f2f;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  user-select: none;
+}
+
+main { width: 100%; max-width: 700px; }
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #090909;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+}
+
+#formSection {
+  background: #d8c3a5;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), inset 0 0 20px rgba(255,255,255,0.4);
+  margin-bottom: 40px;
+}
+
+form label { display:block; margin-top:15px; font-weight:600; color:#2e2b2b; }
+
+form input[type="text"], form input[type="date"], form input[type="time"], form input[type="file"] {
+  width:100%; padding:10px 14px; border-radius:12px; border:2px solid #a39887; font-size:1rem; margin-top:5px; background:#f5ede7; color:#3c2f2f;
+}
+
+form input:focus { outline:none; border-color:#6b584c; box-shadow:0 0 10px #6b584c; }
+
+button#generateBtn { width:100%; margin-top:25px; padding:14px 0; background:#3c2f2f; color:#d8c3a5; font-weight:700; font-size:1.1rem; border:none; border-radius:30px; cursor:pointer; box-shadow:0 4px 15px rgba(220,180,150,0.7); transition: background-color .3s, transform .2s; }
+button#generateBtn:hover { background:#d8c3a5; color:#3c2f2f; transform:scale(1.05); }
+
+#cardSection { display:flex; justify-content:center; margin-bottom:50px; }
+.hidden { display:none !important; }
+
+.card {
+  position:relative; width:100%; max-width:450px; background:#3c2f2f; border-radius:25px; padding:30px 30px 40px; box-shadow:0 8px 30px rgba(0,0,0,0.8), inset 0 0 60px #d8c3a5; color:#f5ede7; overflow:hidden; cursor:default; transition: transform .3s; user-select:text;
+}
+.card:hover { transform:scale(1.03); }
+
+.shape { position:absolute; opacity:0.2; transition: opacity .3s; z-index:0; }
+.circle { width:120px; height:120px; border-radius:50%; background:#c0535b; top:-30px; right:-40px; }
+.triangle { width:0; height:0; border-left:70px solid transparent; border-right:70px solid transparent; border-bottom:120px solid #b29e88; bottom:-40px; left:-50px; transform:rotate(20deg); }
+.square { width:90px; height:90px; background:#a39887; top:60%; left:50%; transform:translate(-50%,-50%) rotate(25deg); }
+
+.card-photo { display:block; width:140px; height:140px; object-fit:cover; border-radius:20px; border:4px solid #d8c3a5; margin:0 auto 20px auto; box-shadow:0 0 15px #d8c3a5; }
+.card-name { font-family: 'Great Vibes', cursive; font-size:3rem; text-align:center; margin:0 0 15px 0; color:#d8c3a5; text-shadow:0 0 12px #f5ede7; cursor:pointer; }
+.card-address, .card-details, .card-note { font-size:1.1rem; margin:6px 0; line-height:1.4; text-align:center; color:#e9dac1; }
+.card-note { margin-top:20px; font-style:italic; font-weight:600; color:#f0d9b5; }
+.map-container { margin-top:20px; border-radius:15px; overflow:hidden; box-shadow:0 0 20px #d8c3a5; }
+
+#confettiCanvas { position: fixed; pointer-events:none; top:0; left:0; width:100vw; height:100vh; z-index:9999; }
